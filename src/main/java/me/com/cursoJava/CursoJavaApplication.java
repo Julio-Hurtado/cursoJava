@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class CursoJavaApplication {
     private static ApplicationContext Globalcontext;
 
+    //Julio Ernesto Hurtado Calero
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(CursoJavaApplication.class, args);
         CursoJavaApplication.Globalcontext = context;
@@ -67,7 +68,7 @@ public class CursoJavaApplication {
                     break;
 
                 case 4:
-                    System.out.println("Listado :" );
+                    System.out.println("Listado :");
                     System.out.println(contexto.obtenerTodo());
                     break;
 
@@ -83,6 +84,7 @@ public class CursoJavaApplication {
         }
 
     }
+
     public static void mostrarMenuPrincipal() {
         System.out.println("*********************");
         System.out.println("Bienvenido al Menu principal");
@@ -105,7 +107,6 @@ public class CursoJavaApplication {
         System.out.println("5) Menu principal");
         System.out.println("*********************");
     }
-
 
 
 }
