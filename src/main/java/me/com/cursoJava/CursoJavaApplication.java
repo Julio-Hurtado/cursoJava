@@ -10,6 +10,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 import java.util.Scanner;
+import java.util.concurrent.Executor;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
 
 @SpringBootApplication
 public class CursoJavaApplication {
@@ -27,7 +31,6 @@ public class CursoJavaApplication {
         Scanner scanner = new Scanner(System.in);
         mostrarMenuPrincipal();
         opcion = scanner.nextInt();
-
         switch (opcion) {
             case 1:
                 Context<Persona> contexto = new Context<>(new PersonaAccion(), context);
@@ -39,6 +42,8 @@ public class CursoJavaApplication {
 
                 break;
             case 3:
+                System.out.println("Saliendo de la aplicacion.......");
+                System.out.println("Copyright (C) 2023 Curso de Java");
                 System.exit(0);
             default:
                 System.out.println("Opcion ingresada no valida");
