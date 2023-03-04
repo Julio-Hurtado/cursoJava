@@ -13,13 +13,13 @@ import java.util.Scanner;
 
 @SpringBootApplication
 public class CursoJavaApplication {
-    private static ApplicationContext Globalcontext;
+    private static ApplicationContext globalContext;
 
     //Julio Ernesto Hurtado Calero
     public static void main(String[] args) {
         ApplicationContext context = SpringApplication.run(CursoJavaApplication.class, args);
-        CursoJavaApplication.Globalcontext = context;
-        iniciarSuperAplicacion(CursoJavaApplication.Globalcontext);
+        CursoJavaApplication.globalContext = context;
+        iniciarSuperAplicacion(CursoJavaApplication.globalContext);
     }
 
     public static void iniciarSuperAplicacion(ApplicationContext context) {
@@ -75,7 +75,7 @@ public class CursoJavaApplication {
 
                 case 5:
                     continuar = false;
-                    iniciarSuperAplicacion(CursoJavaApplication.Globalcontext);
+                    iniciarSuperAplicacion(CursoJavaApplication.globalContext);
                 default:
                     System.out.println("Opcion ingresada no valida");
                     break;
